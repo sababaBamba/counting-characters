@@ -1,52 +1,21 @@
-# Prerequisites
-*.d
+#include <stdio.h>
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+int maix() //program that count the number of characters in a string using pointers
+{
 
-# Linker output
-*.ilk
-*.map
-*.exp
+    int counter = 0;
 
-# Precompiled Headers
-*.gch
-*.pch
+    char myString[] = "one two four twenty four"; //there is 24 characters in this string
+    char *ps = myString;
+    char *pEnd = &myString[0];
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+    while(*pEnd != '\0')
+    {
+        counter++;
+        pEnd++;
+    }
+    printf("%d" , counter);//should output 24
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+    return 0;
+}
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
